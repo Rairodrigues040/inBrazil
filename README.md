@@ -95,7 +95,7 @@ Perguntas interativas para testar os conhecimentos do usuário.
 ## 🎥 Demonstração
 
 Confira o funcionamento do aplicativo:
-[![Demonstração do InBrazil]([https://www.youtube.com/watch?v=ABC123](https://youtu.be/gpQn4GzBz6o))
+[![Demonstração do InBrazil](https://img.youtube.com/vi/gpQn4GzBz6o/maxresdefault.jpg)](https://youtu.be/gpQn4GzBz6o)
 
 Apresenta o desempenho final após a conclusão do quiz.
 
