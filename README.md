@@ -2,59 +2,72 @@
 
 Um aplicativo Android nativo desenvolvido para promover a exploração das regiões brasileiras, unindo **turismo, cultura e educação** em uma experiência interativa.
 
-O **InBrazil** permite que o usuário explore as cinco regiões do Brasil, conheça informações sobre seus estados e teste seus conhecimentos por meio de um quiz interativo sobre geografia, capitais e cultura brasileira.
+O **InBrazil** permite que o usuário explore as regiões brasileiras, conheça informações sobre seus estados e teste seus conhecimentos por meio de um quiz interativo sobre geografia, capitais e cultura brasileira.
+
+> 🚧 **Status:** o projeto está em desenvolvimento. Atualmente, o fluxo funcional está disponível para a **Região Norte, especificamente para o estado do Acre**. Os demais estados e regiões ainda estão sendo desenvolvidos.
+
+---
 
 ## 📱 Funcionalidades
 
 ### 🗺️ Navegação Regional
 
-* Seleção entre as **5 regiões brasileiras**.
-* Exploração dos **26 estados e do Distrito Federal**.
-* Navegação organizada entre regiões, estados e informações detalhadas.
+- Seleção entre as **5 regiões brasileiras**.
+- Exploração dos estados de cada região.
+- Navegação organizada entre regiões, estados e informações detalhadas.
 
 ### 📍 Catálogo de Estados
 
-* Listagem dos estados pertencentes à região selecionada.
-* Interface visual e intuitiva para facilitar a exploração.
+- Listagem dos estados pertencentes à região selecionada.
+- Interface visual e intuitiva para facilitar a exploração.
+- Organização dos estados de acordo com suas respectivas regiões.
 
 ### 🌎 Detalhes dos Estados
 
-* Informações sobre a **capital**.
-* Curiosidades e aspectos **culturais**.
-* Informações relacionadas ao **clima**.
-* Consulta da **temperatura atual** por meio de API externa.
+- Informações sobre a **capital**.
+- Curiosidades e aspectos **culturais**.
+- Informações relacionadas ao **clima**.
+- Consulta da **temperatura atual** por meio de uma API externa.
 
 ### 🧠 Quiz Interativo
 
-* Perguntas sobre **geografia, capitais e conhecimentos gerais** do Brasil.
-* Quatro alternativas por questão.
-* Validação imediata da resposta selecionada.
+- Perguntas sobre **geografia, capitais e conhecimentos gerais** do Brasil.
+- Quatro alternativas por questão.
+- Validação imediata da resposta selecionada.
 
 ### 📚 Feedback Educativo
 
-* Indicação visual de respostas corretas e incorretas.
-* Exibição de explicações para as respostas.
-* Recurso desenvolvido para transformar o quiz em uma experiência de aprendizado.
+- Indicação visual de respostas corretas e incorretas.
+- Exibição de explicações para as respostas.
+- Recurso desenvolvido para transformar o quiz em uma experiência de aprendizado.
 
 ### 🏆 Resultado
 
-* Exibição da pontuação ao final do quiz.
-* Quantidade de acertos e erros.
-* Resumo do desempenho do usuário.
+- Exibição da pontuação ao final do quiz.
+- Quantidade de acertos e erros.
+- Resumo do desempenho do usuário.
+
+---
+
+## 🎥 Demonstração
+
+Confira o funcionamento do aplicativo **InBrazil**:
+
+[![Demonstração do InBrazil](https://img.youtube.com/vi/gpQn4GzBz6o/maxresdefault.jpg)](https://youtu.be/gpQn4GzBz6o)
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Tecnologia             | Utilização                                    |
-| ---------------------- | --------------------------------------------- |
-| **Kotlin**             | Linguagem principal do projeto                |
-| **Jetpack Compose**    | Construção da interface de usuário            |
-| **Navigation Compose** | Navegação entre as telas                      |
-| **Room Database**      | Persistência e gerenciamento dos dados locais |
-| **Retrofit**           | Comunicação com APIs externas                 |
-| **GSON**               | Conversão e mapeamento dos dados JSON         |
-| **Android SDK**        | Desenvolvimento da aplicação Android          |
+| Tecnologia | Utilização |
+|---|---|
+| **Kotlin** | Linguagem principal do projeto |
+| **Jetpack Compose** | Construção da interface de usuário |
+| **Navigation Compose** | Navegação entre as telas |
+| **Room Database** | Persistência e gerenciamento dos dados locais |
+| **Retrofit** | Comunicação com APIs externas |
+| **GSON** | Conversão e mapeamento dos dados JSON |
+| **Android SDK** | Desenvolvimento da aplicação Android |
 
 ---
 
@@ -64,11 +77,32 @@ O projeto utiliza uma estrutura organizada para separar as responsabilidades da 
 
 Entre os principais componentes utilizados estão:
 
-* **UI:** telas construídas com Jetpack Compose.
-* **Navigation:** gerenciamento do fluxo de navegação utilizando Navigation Compose.
-* **Database:** persistência dos dados utilizando Room.
-* **API:** comunicação com serviços externos utilizando Retrofit.
-* **Model:** representação dos dados utilizados pela aplicação.
+- **UI:** telas construídas com Jetpack Compose.
+- **Navigation:** gerenciamento do fluxo de navegação utilizando Navigation Compose.
+- **Database:** persistência dos dados utilizando Room.
+- **API:** comunicação com serviços externos utilizando Retrofit.
+- **Model:** representação dos dados utilizados pela aplicação.
+
+---
+
+## 🌦️ API de Clima
+
+O aplicativo utiliza uma **API de clima** para consultar e exibir informações meteorológicas, como a **temperatura atual** do estado selecionado.
+
+A integração com a API é realizada utilizando:
+
+- **Retrofit** para realizar as requisições HTTP.
+- **GSON** para converter os dados retornados pela API em objetos Kotlin.
+
+### 📌 Fluxo atualmente disponível
+
+No momento, a integração e o fluxo funcional estão disponíveis para:
+
+**Região Norte → Acre → Informações do estado → Clima**
+
+Os demais estados e regiões ainda estão sendo desenvolvidos.
+
+> ⚠️ **Importante:** ao executar o projeto atualmente, recomenda-se utilizar o fluxo da **Região Norte → Acre**, pois os demais caminhos ainda estão em desenvolvimento.
 
 ---
 
@@ -92,11 +126,6 @@ Perguntas interativas para testar os conhecimentos do usuário.
 
 ### 🏆 Resultado
 
-## 🎥 Demonstração
-
-Confira o funcionamento do aplicativo:
-[![Demonstração do InBrazil](https://img.youtube.com/vi/gpQn4GzBz6o/maxresdefault.jpg)](https://youtu.be/gpQn4GzBz6o)
-
 Apresenta o desempenho final após a conclusão do quiz.
 
 |                                                  Início                                                  |                                                  Estados                                                 |                                                 Detalhes                                                 |
@@ -109,16 +138,48 @@ Apresenta o desempenho final após a conclusão do quiz.
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## 🚧 Status do Projeto
+
+O **InBrazil** está em desenvolvimento.
+
+Atualmente, o fluxo funcional disponível é:
+
+```text
+🇧🇷 Início
+   ↓
+🌎 Região Norte
+   ↓
+📍 Acre
+   ↓
+🌡️ Informações do estado
+   ↓
+🌦️ Temperatura atual
+```
+
+Os demais estados e regiões ainda estão sendo desenvolvidos e serão adicionados progressivamente ao projeto.
+
+### 🔜 Próximos passos
+
+- [ ] Implementar os demais estados da Região Norte.
+- [ ] Implementar as demais regiões brasileiras.
+- [ ] Adicionar informações detalhadas para todos os estados.
+- [ ] Expandir a integração com a API de clima.
+- [ ] Ampliar o banco de perguntas do quiz.
+- [ ] Melhorar a experiência de navegação e interação.
+- [ ] Adicionar novos conteúdos culturais e turísticos.
+
+---
+
+## 🚀 Como Rodar o Projeto Localmente
 
 ### Pré-requisitos
 
 Antes de executar o projeto, certifique-se de ter instalado:
 
-* **Android Studio**
-* **JDK compatível com a versão do projeto**
-* **Android SDK**
-* Um dispositivo Android físico ou um **Android Emulator**
+- **Android Studio**
+- **JDK compatível com a versão do projeto**
+- **Android SDK**
+- Um dispositivo Android físico ou um **Android Emulator**
 
 ### 📥 1. Clone o repositório
 
@@ -142,8 +203,8 @@ Aguarde o Android Studio concluir a sincronização do **Gradle** e o download d
 
 Você pode executar o aplicativo utilizando:
 
-* Um dispositivo Android físico com **Depuração USB** habilitada; ou
-* Um dispositivo virtual criado pelo **Android Studio (AVD)**.
+- Um dispositivo Android físico com **Depuração USB** habilitada; ou
+- Um dispositivo virtual criado pelo **Android Studio (AVD)**.
 
 ### ▶️ 4. Execute o aplicativo
 
@@ -154,47 +215,20 @@ No Android Studio:
 3. Clique em **Run ▶**.
 4. Aguarde a instalação e inicialização do aplicativo.
 
----
+### ⚠️ Fluxo recomendado
 
-## 🌦️ API de clima
-
-O aplicativo utiliza uma API externa para consultar informações meteorológicas e apresentar a temperatura atual do estado selecionado.
-
-Para executar o projeto corretamente, verifique se as configurações necessárias da API estão presentes no projeto.
-
-> **Importante:** não coloque chaves de API diretamente no código-fonte ou em um repositório público. Utilize variáveis de ambiente, `local.properties` ou outra forma segura de armazenamento.
-
----
-
-## 📂 Estrutura do Projeto
-
-Uma estrutura aproximada do projeto é:
+Como o projeto ainda está em desenvolvimento, utilize o seguinte caminho para testar as funcionalidades disponíveis:
 
 ```text
-app/
-└── src/
-    └── main/
-        └── java/
-            └── com/
-                └── rai/
-                    └── inbrazil/
-                        ├── data/
-                        │   ├── database/
-                        │   └── api/
-                        │
-                        ├── model/
-                        │
-                        ├── navigation/
-                        │
-                        └── ui/
-                            ├── screens/
-                            ├── components/
-                            └── theme/
+Início
+  ↓
+Região Norte
+  ↓
+Acre
 ```
 
-A estrutura pode variar de acordo com a organização atual do projeto.
-
 ---
+
 
 ## 🎯 Objetivo do Projeto
 
@@ -202,13 +236,13 @@ O **InBrazil** foi desenvolvido com o objetivo de utilizar a tecnologia como fer
 
 Além da proposta educacional, o projeto também serve como aplicação prática de conceitos de desenvolvimento Android, como:
 
-* Desenvolvimento com **Kotlin**;
-* **Jetpack Compose**;
-* Persistência de dados com **Room**;
-* Consumo de APIs REST com **Retrofit**;
-* Navegação entre telas;
-* Gerenciamento de estado;
-* Arquitetura e organização de projetos Android.
+- Desenvolvimento com **Kotlin**;
+- **Jetpack Compose**;
+- Persistência de dados com **Room**;
+- Consumo de APIs REST com **Retrofit**;
+- Navegação entre telas;
+- Gerenciamento de estado;
+- Organização e arquitetura de projetos Android.
 
 ---
 
@@ -217,3 +251,5 @@ Além da proposta educacional, o projeto também serve como aplicação prática
 **Raí Rodrigues**
 
 Projeto desenvolvido como parte da minha jornada de aprendizado e desenvolvimento em **Android/Kotlin**.
+
+---
