@@ -11,10 +11,6 @@ class PerguntaRepository(
     private val perguntaDao: PerguntaDao
 ) {
 
-    suspend fun inserir(pergunta: Pergunta) {
-        perguntaDao.inserir(pergunta.toEntity())
-    }
-
     suspend fun inserirTodas(perguntas: List<Pergunta>) {
         perguntas.forEach { pergunta ->
             perguntaDao.inserir(pergunta.toEntity())
@@ -24,15 +20,6 @@ class PerguntaRepository(
     suspend fun buscarTodas(): List<Pergunta> {
         return perguntaDao.buscarTodas()
             .map{ entity -> entity.toModel() }
-    }
-
-
-    suspend fun buscarPorId(id: Long): Pergunta? {
-        return perguntaDao.buscarPorId(id)?.toModel()
-    }
-
-    suspend fun apagarTodas(){
-        perguntaDao.apagarTodas()
     }
 
     suspend fun contarPerguntas(): Int {

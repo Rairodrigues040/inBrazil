@@ -1,4 +1,4 @@
-package com.rai.inbrazil.ui.theme.apiClima
+package com.rai.inbrazil.ui.theme.UiApiClima
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -23,7 +23,6 @@ fun ClimaScreen() {
     }
 
     LaunchedEffect(Unit) {
-
         val resposta = RetrofitInstance.api.buscarClima(
             latitude = -9.97499,
             longitude = -67.8243

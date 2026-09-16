@@ -42,7 +42,7 @@ fun AppNavigation( viewModel: QuizViewModel) {
             }
 
             composable("estadoAcre"){
-                EstadoAcre()
+                EstadoAcre(navController)
             }
 
             composable("quizScreen") {
