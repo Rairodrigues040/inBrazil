@@ -11,5 +11,8 @@ data class QuizUiState(
     val pontuacao: Int = 0,
     val quantidadeAcertos: Int = 0,
     val quantidadeErros: Int = 0,
-    val quizFinalizado: Boolean = false
+    val quizFinalizado: Boolean = false,
+
+    // Cronômetro
+    val tempoRestante: Int = 20
 )

@@ -25,4 +25,8 @@ class PerguntaRepository(
     suspend fun contarPerguntas(): Int {
         return perguntaDao.contarPerguntas().toInt()
     }
+
+    suspend fun apagarTodas() {
+        perguntaDao.apagarTodas()
+    }
 }

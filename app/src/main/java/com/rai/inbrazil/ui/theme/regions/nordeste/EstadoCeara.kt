@@ -1,5 +1,6 @@
-package com.rai.inbrazil.ui.theme.regions
+package com.rai.inbrazil.ui.theme.regions.nordeste
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -23,26 +24,29 @@ import androidx.navigation.NavController
 import com.rai.inbrazil.R
 import com.rai.inbrazil.data.Regiao
 import com.rai.inbrazil.ui.theme.Azul_Marinho
-import com.rai.inbrazil.ui.theme.UiApiClima.ClimaScreen
 import com.rai.inbrazil.ui.theme.components.PageReturn
 import com.rai.inbrazil.ui.theme.components.RegiaoCard
 
 @Composable
-fun EstadoAcre(navController: NavController){
+fun EstadoCeara(navController: NavController) {
 
     val fraunces = FontFamily(Font(R.font.fraunces_extrabold))
 
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(Color.White)
             .padding(20.dp)
     ) {
-        Row (verticalAlignment = Alignment.CenterVertically){
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+
             PageReturn(navController)
 
             Column(verticalArrangement = Arrangement.Center) {
+
                 Text(
-                    text = "Região Norte",
+                    text = "Região Nordeste",
                     fontSize = 24.sp,
                     modifier = Modifier.padding(top = 20.dp),
                     fontWeight = FontWeight.Bold
@@ -60,19 +64,18 @@ fun EstadoAcre(navController: NavController){
         Spacer(modifier = Modifier.height(30.dp))
 
         Text(
-            text = "O que você deseja conhecer no estado do Acre?",
+            text = "O que você deseja conhecer no estado do Nordeste?",
             textAlign = TextAlign.Center,
             fontSize = 21.sp,
             fontWeight = FontWeight.Bold,
             color = Azul_Marinho,
-            modifier = Modifier.fillMaxWidth(),
-
+            modifier = Modifier.fillMaxWidth()
         )
 
         Spacer(modifier = Modifier.height(30.dp))
 
         Text(
-            "Capital: ",
+            text = "Estado: ",
             color = Azul_Marinho,
             textAlign = TextAlign.Left,
             modifier = Modifier.padding(start = 16.dp),
@@ -80,12 +83,12 @@ fun EstadoAcre(navController: NavController){
         )
 
         RegiaoCard(
-            Regiao("Rio Branco", R.drawable.rio_branco),
-            onClick = {}
+            Regiao("Ceará", R.drawable.ceara_estado),
+            onClick = { navController.navigate("newEstadoNordeste") }
         )
 
         Text(
-            "Cultura: ",
+            text = "Instituições Acadêmicas: ",
             color = Azul_Marinho,
             textAlign = TextAlign.Left,
             modifier = Modifier.padding(start = 16.dp),
@@ -93,13 +96,8 @@ fun EstadoAcre(navController: NavController){
         )
 
         RegiaoCard(
-            Regiao("Cultura", R.drawable.cultura ),
-            onClick = {}
+            Regiao("UFC", R.drawable.ufc_russas),
+            onClick = {navController.navigate("newInstituacaoCeara")}
         )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        ClimaScreen()
-
     }
 }

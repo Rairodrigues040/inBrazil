@@ -7,12 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import com.rai.inbrazil.data.database.QuizDatabase
 import com.rai.inbrazil.data.presentation.QuizViewModel
 import com.rai.inbrazil.data.repository.PerguntaRepository
 import com.rai.inbrazil.navigation.AppNavigation
 import com.rai.inbrazil.ui.theme.Bege
 import com.rai.inbrazil.ui.theme.InBrazilTheme
+import com.rai.inbrazil.ui.theme.components.CardeCulturaAcre
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

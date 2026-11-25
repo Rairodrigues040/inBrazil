@@ -27,7 +27,6 @@ fun ClimaScreen() {
             latitude = -9.97499,
             longitude = -67.8243
         )
-
         temperatura = resposta.current_weather.temperature
     }
 

@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.rai.inbrazil.data.Regiao
 
 @Composable
-fun RegiaoCard(regiao: Regiao, onClick: () -> Unit) {
+fun  RegiaoCard(regiao: Regiao, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()

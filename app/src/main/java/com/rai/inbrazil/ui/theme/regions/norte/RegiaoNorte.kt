@@ -1,6 +1,6 @@
-package com.rai.inbrazil.ui.theme.regions
+package com.rai.inbrazil.ui.theme.regions.norte
 
-import androidx.compose.foundation.gestures.snapping.SnapPosition
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,7 +16,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -25,28 +24,26 @@ import com.rai.inbrazil.data.Regiao
 import com.rai.inbrazil.ui.theme.components.PageReturn
 import com.rai.inbrazil.ui.theme.components.RegiaoCard
 
-
 @Composable
 fun RegiaoNorte(navController: NavController) {
+
     val estadosNorte = listOf(
         Regiao("Acre", R.drawable.acre_norte),
-        Regiao("Amapá", R.drawable.amapa_norte),
-        Regiao("Amazonas", R.drawable.amazonas_norte),
-        Regiao("Pará", R.drawable.para_norte),
-        Regiao("Rondônia", R.drawable.rondonia_norte),
-        Regiao("Roraima", R.drawable.roraima_norte),
-        Regiao("Tocantins", R.drawable.tocantins_norte),
     )
-// posso componentizar
+
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(Color.White)
             .padding(20.dp)
     ) {
-        Row (verticalAlignment = Alignment.CenterVertically){
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+
             PageReturn(navController)
 
             Column(verticalArrangement = Arrangement.Center) {
+
                 Text(
                     text = "Região Norte",
                     fontSize = 24.sp,
@@ -63,33 +60,19 @@ fun RegiaoNorte(navController: NavController) {
             }
         }
 
-
         Spacer(modifier = Modifier.height(20.dp))
 
         LazyColumn {
             items(estadosNorte) { estados ->
+
                 RegiaoCard(estados) {
                     when (estados.nome) {
                         "Acre" -> {
                             navController.navigate("estadoAcre")
                         }
-
-                        "Amapá" -> {}
-                        "Amazonas" -> {}
-                        "Pará" -> {}
-                        "Rondônia" -> {}
-                        "Roraima" -> {}
-                        "Tocantins" -> {}
                     }
                 }
             }
         }
-
     }
-}
-
-@Preview(showSystemUi = true)
-@Composable
-fun norte() {
-
 }
