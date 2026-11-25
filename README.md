@@ -285,7 +285,7 @@ Antes de executar o projeto, certifique-se de ter instalado:
 ### 📥 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+[https://github.com/Rairodrigues040/inBrazil.git](https://github.com/Rairodrigues040/inBrazil.git)
 ```
 
 Entre na pasta do projeto:
